@@ -9,7 +9,7 @@ import { UserContext } from '../../UserContext'
 import Error from '../Helper/Error'
 
 const LoginForm = () => {
-  const userName = useForm()
+  const username = useForm()
   const password = useForm()
 
   const { userLogin, error, loading } = useContext(UserContext)
@@ -17,8 +17,8 @@ const LoginForm = () => {
   async function handleSubmit(event) {
     event.preventDefault()
 
-    if (userName.validate() && password.validate()) {
-      userLogin(userName.value, password.value)
+    if (username.validate() && password.validate()) {
+      userLogin(username.value, password.value)
     }
   }
 
@@ -26,7 +26,7 @@ const LoginForm = () => {
     <section className={`animeLeft`}>
       <h1 className="title">Login</h1>
       <form className={styles.form} action="" onSubmit={handleSubmit}>
-        <Input label="Usuário" type="text" name="userName" {...userName} />
+        <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
         {loading ? (
           <Button disabled>Carregando...</Button>

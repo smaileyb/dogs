@@ -31,11 +31,11 @@ export const UserStorage = ({ children }) => {
     setLogin(true)
   }
 
-  async function userLogin(userName, password) {
+  async function userLogin(username, password) {
     try {
       setError(null)
       setLoading(true)
-      const { url, options } = TOKEN_POST({ userName, password })
+      const { url, options } = TOKEN_POST({ username, password })
       const tokenResponse = await fetch(url, options)
       if (!tokenResponse.ok)
         throw new Error(`Error: ${tokenResponse.statusText}`)

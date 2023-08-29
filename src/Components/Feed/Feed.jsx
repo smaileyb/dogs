@@ -12,7 +12,7 @@ const Feed = ({ user }) => {
     function infineteScroll() {
       if (infinite) {
         const scroll = window.scrollY
-        const height = document.body.offSetHeight - window.innerHeight
+        const height = document.body.offsetHeight - window.innerHeight
         if (scroll > height * 0.75 && !wait) {
           setPages(pages => [...pages, pages.length + 1])
           wait = true

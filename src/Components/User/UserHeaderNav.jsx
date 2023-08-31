@@ -14,7 +14,7 @@ const UserHeaderNav = () => {
 
   function handleLogout() {
     userLogout()
-    navigate('dogs/login')
+    navigate('/dogs/login')
   }
 
   const mobile = useMedia('(max-width: 40rem)')
@@ -41,13 +41,13 @@ const UserHeaderNav = () => {
           mobileMenu && styles.navMobileActive
         }`}
       >
-        <NavLink to="dogs/conta" end>
+        <NavLink to="/dogs/conta" end>
           <MinhasFotos /> {mobile && 'Minhas Fotos'}
         </NavLink>
-        <NavLink to="dogs/conta/estatisticas">
+        <NavLink to="estatisticas">
           <Estatisticas /> {mobile && 'Estatísticas'}
         </NavLink>
-        <NavLink to="dogs/conta/postar">
+        <NavLink to="postar">
           <AdicionarFoto /> {mobile && 'Adicionar Foto'}
         </NavLink>
         <button onClick={handleLogout}>

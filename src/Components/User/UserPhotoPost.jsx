@@ -21,7 +21,7 @@ const UserPhotoPost = () => {
 
   useEffect(() => {
     if (data) {
-      navigate('dogs/conta')
+      navigate('/dogs/conta')
     }
   }, [data, navigate])
 
